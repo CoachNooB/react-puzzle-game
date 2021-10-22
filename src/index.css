@@ -1,0 +1,75 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes tokenAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(90deg)
+  }
+
+  50% {
+    transform: rotate(-90deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-display {
+  padding-top: 50px;
+  display: flex;
+  align-items: space-between;
+}
+
+.game-board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 560px;
+  height: 560px;
+  margin-right: 50px;
+}
+
+.game-board img {
+  width: 70px;
+  height: 70px;
+}
+
+.game-board img:hover {
+  animation: tokenAnimation 2s ease-in-out forwards;
+  animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+}
+
+.score-board {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.credits {
+  margin-top: auto;
+  marin-bottom: 10px;
+}
